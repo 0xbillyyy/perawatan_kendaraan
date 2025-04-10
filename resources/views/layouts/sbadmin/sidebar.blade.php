@@ -113,6 +113,18 @@
                     <span>Jenis Perawatan</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('service') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Jenis Service</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('tambah/service') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Tambah Jenis Service</span></a>
+            </li>
+
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">

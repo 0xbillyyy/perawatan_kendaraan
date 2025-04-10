@@ -92,4 +92,20 @@ class KendaraanController extends Controller
     }
 
 
+    public function destroy($id){
+        $data = KendaraanModel::findOrFail($id);
+        $data->delete();
+
+        if($data){
+            Alert::success("Berhasil!", "Berhasil hapus jenis perawatan!");
+            return redirect()->back()->with('success', 'Jenis perawatan berhasil dihapus.');
+        }
+    }
+
+
+    public function added_service($id){
+        return view("feature.kendaraan.added_service");
+    }
+
+
 }

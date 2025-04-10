@@ -37,6 +37,7 @@
                         <td>{{ $item->tahun_pembuatan }}</td>
                         <td>{{ $item->berlaku_stnk_tanggal }}</td>
                         <td>
+                            <a href="{{ route('kendaraan.service', $item->id) }}" class="btn btn-sm btn-success">Service</a>
                             <a href="{{ route('kendaraan.edit', $item->id) }}" class="btn btn-sm btn-warning">Edit</a>
                             <form action="{{ route('kendaraan.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin mau hapus?')">
                                 @csrf
