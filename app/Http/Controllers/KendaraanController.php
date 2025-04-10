@@ -53,4 +53,10 @@ class KendaraanController extends Controller
         }
     }
 
+    public function edit($id)
+    {
+        $kendaraan = KendaraanModel::findOrFail($id);
+        return view('feature.kendaraan.edit', compact('kendaraan'));
+    }
+
 }

@@ -6,6 +6,8 @@
 <div class="card">
     <div class="card-body">
         <h4>Data Jenis Perawatan</h4>
+        <a href="{{ route('tambah.jenis.perawatan') }}" class="btn btn-primary mb-3">Tambah Jenis Perawatan</a>
+
         <table id="jenisTable" class="table table-bordered table-striped">
             <thead>
                 <tr>

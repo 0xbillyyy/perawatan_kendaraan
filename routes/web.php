@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/kendaraan/store', [KendaraanController::class, 'store'])->name('kendaraan.store');
     Route::get("/kendaraan/edit/{id}", [KendaraanController::class, "edit"])->name("kendaraan.edit");
     Route::delete("/kendaraan/destroy/{id}", [KendaraanController::class, "destroy"])->name("kendaraan.destroy");
+    Route::put("/kendaraan/update/{id}", [KendaraanController::class, "update"])->name("kendaraan.update");
 
     Route::get("/jenis_perawatan", [JenisPerawatanController::class, "index"])->name("jenis_perawatan");
     Route::get("/tambah_jenis_perawatan", [JenisPerawatanController::class, "tambah"])->name("tambah.jenis.perawatan");
