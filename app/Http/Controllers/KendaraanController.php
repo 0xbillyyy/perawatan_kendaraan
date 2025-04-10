@@ -59,4 +59,37 @@ class KendaraanController extends Controller
         return view('feature.kendaraan.edit', compact('kendaraan'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $validated = $request->validate([
+            "no_plat" => "required|string|max:20",
+            "nama_pemilik" => "required|string|max:100",
+            "alamat" => "required|string|max:255",
+            "merk" => "required|string|max:100",
+            "type" => "nullable|string|max:100",
+            "jenis" => "nullable|string|max:50",
+            "tahun_pembuatan" => "nullable|integer|min:1900|max:" . date('Y'),
+            "cc" => "nullable|integer|min:1",
+            "no_rangka" => "nullable|string|max:100",
+            "no_mesin" => "nullable|string|max:100",
+            "warna" => "nullable|string|max:50",
+            "bahan_bakar" => "nullable|string|max:50",
+            "tahun_registrasi" => "nullable|integer|min:1900|max:" . date('Y'),
+            "no_bpkb" => "nullable|string|max:100",
+            "berlaku_stnk" => "nullable|string|max:100",
+            "berlaku_stnk_tanggal" => "nullable|date",
+            "no_plat_dinas" => "nullable|string|max:50",
+            "masa_berlaku_plat_dinas" => "nullable|date",
+        ]);
+
+        $kendaraan = KendaraanModel::findOrFail($id);
+        $kendaraan->update($validated);
+
+        if($kendaraan){
+            Alert::success("Berhasil!", "Data kendaraan berhasil diupdate!");
+            return redirect()->route('kendaraan.index');
+        }
+    }
+
+
 }
