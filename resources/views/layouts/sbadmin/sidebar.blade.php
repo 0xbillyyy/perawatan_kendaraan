@@ -105,7 +105,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('tambah_jenis_perawatan') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Tambah Jenis Kendaraan</span></a>
+                    <span>Tambah Jenis Perawatan</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('jenis_perawatan') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Jenis Perawatan</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

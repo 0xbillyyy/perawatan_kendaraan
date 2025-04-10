@@ -11,6 +11,11 @@ class JenisPerawatanController extends Controller
 {
     //
 
+    public function index(){
+        $data = JenisPerawatanModel::all();
+        return view("feature.jenis_perawatan.index", compact("data"));
+    }
+
     public function tambah(){
         return view("feature.jenis_perawatan.tambah");
     }
@@ -32,5 +37,16 @@ class JenisPerawatanController extends Controller
             return redirect()->back()->with('success', 'Jenis perawatan berhasil ditambahkan!');
         // }
 
+    }
+
+    public function destroy($id)
+    {
+        $data = JenisPerawatanModel::findOrFail($id);
+        $data->delete();
+
+        if($data){
+            Alert::success("Berhasil!", "Berhasil hapus jenis perawatan!");
+            return redirect()->back()->with('success', 'Jenis perawatan berhasil dihapus.');
+        }
     }
 }

@@ -23,12 +23,21 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get("/kendaraan", [KendaraanController::class, "index"])->name("kendaraan.index");
-    Route::get("/tambah_kendaraan", [KendaraanController::class, "tambah"])->name("kendaraan.tambah");
+    Route::get("/tambah_kendaraan", [KendaraanController::class, "tambah"])->name("kendaraan.create");
+    Route::post('/kendaraan/store', [KendaraanController::class, 'store'])->name('kendaraan.store');
+    Route::get("/kendaraan/edit/{id}", [KendaraanController::class, "edit"])->name("kendaraan.edit");
+    Route::delete("/kendaraan/destroy/{id}", [KendaraanController::class, "destroy"])->name("kendaraan.destroy");
 
+    Route::get("/jenis_perawatan", [JenisPerawatanController::class, "index"])->name("jenis_perawatan");
     Route::get("/tambah_jenis_perawatan", [JenisPerawatanController::class, "tambah"])->name("tambah.jenis.perawatan");
     Route::post("/tambah_jenis_perawatan", [JenisPerawatanController::class, "aksi_tambah"])->name("aksi.tambah.jenis_perawatan");
+    Route::delete('/jenis-perawatan/{id}', [JenisPerawatanController::class, 'destroy'])->name('jenis_perawatan.destroy');
 
-    Route::post("/tambah_kendaraan", [KendaraanController::class, "aksi_tambah"])->name("aksi.tambah.kendaraan");
+
+
+
+
+
 
 });
 
