@@ -120,7 +120,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('tambah/service') }}">
+                <a class="nav-link" href="{{ url('service/create') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Tambah Jenis Service</span></a>
             </li>

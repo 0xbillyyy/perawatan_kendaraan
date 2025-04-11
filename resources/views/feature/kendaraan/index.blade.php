@@ -11,7 +11,7 @@
     <div class="card-body">
         <a href="{{ route('kendaraan.create') }}" class="btn btn-primary mb-3">Tambah Kendaraan</a>
 
-        <table id="kendaraanTable" class="table table-bordered table-striped">
+        <table id="kendaraanTable" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
                     <th>No</th>

@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('perawatan', function (Blueprint $table) {
+        Schema::create('service_permobil', function (Blueprint $table) {
             $table->id();
-            $table->text("jenis_perawatan")->nullable();
-            $table->text("sparepart")->nullable();
+            $table->text("perawatan_id");
+            $table->date("tanggal_perwatan")->nullable();
+            $table->date("tanggal_perawatan_berikutnya")->nullable();
+            $table->text("jumlah_km")->nullable();
             $table->text("deskripsi")->nullable();
             $table->timestamps();
         });
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('perawatan');
+        Schema::dropIfExists('service_permobil');
     }
 };

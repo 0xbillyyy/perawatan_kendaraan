@@ -35,9 +35,13 @@ Route::middleware('auth')->group(function () {
 
 
     //added service
-    Route::get("/service", [ServiceController::class, "index"])->name("service");
-    Route::get("/tambah/service", [ServiceController::class, "added_service"])->name("service.create");
-    Route::post("/tambah/service", [ServiceController::class, "store"])->name("service.store");
+    Route::get('/service', [ServiceController::class, 'index'])->name('service.index');
+    Route::get('/service/create', [ServiceController::class, 'create'])->name('service.create');
+    Route::post('/service', [ServiceController::class, 'store'])->name('service.store');    
+    Route::get('/service/{id}/edit', [ServiceController::class, 'edit'])->name('service.edit');
+    Route::put('/service/{id}', [ServiceController::class, 'update'])->name('service.update');
+    Route::delete('/service/{id}', [ServiceController::class, 'destroy'])->name('service.destroy');
+    
 
 
     Route::get("/jenis_perawatan", [JenisPerawatanController::class, "index"])->name("jenis_perawatan");

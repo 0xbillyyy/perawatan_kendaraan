@@ -8,7 +8,7 @@
         <h4>Data Jenis Perawatan</h4>
         <a href="{{ route('tambah.jenis.perawatan') }}" class="btn btn-primary mb-3">Tambah Jenis Perawatan</a>
 
-        <table id="jenisTable" class="table table-bordered table-striped">
+        <table id="jenisTable" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
                     <th width="50px">No</th>

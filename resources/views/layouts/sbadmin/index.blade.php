@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SIT - @yield("titlgit inite")</title>
+    <title>SIT - @yield("title")</title>
 
     <link href="{{ asset('sbadmin2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('sbadmin2/css/sb-admin-2.min.css') }}" rel="stylesheet">
