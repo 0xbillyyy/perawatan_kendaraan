@@ -28,20 +28,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
+
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -91,27 +78,93 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Kendaraan</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ url('/kendaraan') }}">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Kendaraan</span>
+                        </a>
+                        <a class="collapse-item" href="{{ url('tambah_kendaraan') }}">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Tambah Kendaraan</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoPerawatan"
+                    aria-expanded="true" aria-controls="collapseTwon">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Perawatan</span>
+                </a>
+                <div id="collapseTwoPerawatan" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ url('jenis_perawatan') }}">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Jenis Perawatan</span>
+                        </a>
+                        <a class="collapse-item" href="{{ url('tambah_jenis_perawatan') }}">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Tambah Jenis</span>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwoService"
+                    aria-expanded="true" aria-controls="collapseTwon">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Service</span>
+                </a>
+                <div id="collapseTwoService" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ url('service') }}">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Jenis Service</span>
+                        </a>
+                        <a class="collapse-item" href="{{ url('service/create') }}">
+                            <i class="fas fa-fw fa-chart-area"></i>
+                            <span>Tambah Jenis Service</span>
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+
+            
+
+            <!-- Nav Item - Charts -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ url('/kendaraan') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Kendaraan</span></a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ url('tambah_kendaraan') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Tambah Kendaraan</span></a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ url('tambah_jenis_perawatan') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Tambah Jenis Perawatan</span></a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ url('jenis_perawatan') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Jenis Perawatan</span></a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('service') }}">
